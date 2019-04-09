@@ -8,9 +8,9 @@ resource "kubernetes_namespace" "example" {
       mylabel = "label-value"
     }
 
-    name = "terraform-example-namespace"
+    name = "terraformexample"
   }
 }
 
 
-output "nameSpace" { value =  "${kubernetes_namespace.example.name}"  }
+output "nameSpace" { value =  "${kubernetes_namespace.example.metadata.0.name}"  }
