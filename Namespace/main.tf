@@ -1,12 +1,12 @@
 resource "kubernetes_namespace" "example" {
   metadata {
-    annotations {
-      name = "example-annotation"
-    }
+#    annotations {
+#      name = "example-annotation"
+#    }
 
-    labels {
-      mylabel = "label-value"
-    }
+#    labels {
+#      mylabel = "label-value"
+#    }
 
     name = "dev-terraform-system"
   }
