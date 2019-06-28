@@ -13,4 +13,6 @@ resource "kubernetes_namespace" "example" {
 }
 
 
-output "nameSpace" { value =  "${kubernetes_namespace.example.metadata.0.name}"  }
+#output "nameSpace" { value =  "${kubernetes_namespace.example.metadata.0.name}"  }
+
+output "nameSpace" { value =  "${kubernetes_namespace.example.metadata.name}"  }
