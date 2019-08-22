@@ -125,3 +125,11 @@ resource "aws_elb" "bar" {
   }
 }
 ######
+
+#### - output values - ####
+
+output "vpcsubnet" { value =  "terra-subnet1" }
+output "vpcLoadblancer" { value =  "${aws_elb.bar.name}" }
+output "vpcSecurityGroup" { value =  "${aws_security_group.My_VPC_Security_Group.name}" }
+output "vpcSecurityGroupID" { value =  "${aws_security_group.My_VPC_Security_Group.id}" }
+
