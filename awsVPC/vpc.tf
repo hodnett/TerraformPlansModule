@@ -21,7 +21,7 @@ resource "aws_subnet" "public" {
   cidr_block = "${element(var.subnets_cidr,count.index)}"
   availability_zone = "${element(var.azs,count.index)}"
   tags {
-    Name = "Subnet-${count.index+1}"
+    Name = "TerraSubnet-${count.index+1}"
     immutable_metadata = "{\"purpose\": \"terra-subnet${count.index+1}\"}"
   }
 }
